@@ -28,8 +28,8 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 |-------|------|--------|--------|
 | **0** | Baseline platform | Done (this repo) | TLS, Vercel System Mitigations, Privacy copy |
 | **1** | Headers + cookie/GPC | **Done** on major public sites* | Required on every public deploy |
-| **2** | Edge + CSP | Partial (this repo) | CSP-RO shipped; app rate-limit; WAF custom N/A on plan; Preview Protection confirm manual |
-| **3** | App security depth | Partial (marketing) | Cookie inventory + honeypot; Turnstile optional via Env |
+| **2** | Edge + CSP | Partial (this repo) | CSP-RO shipped; app rate-limit; WAF custom N/A on plan; Preview Protection: Fleet Standard on (2026-10-17); Gurukul Preview stays unlocked |
+| **3** | App security depth | In progress | Marketing + horoscope Turnstile live; CoPlanner auth Turnstile live; Fleet guest forms Turnstile wired (ship pending) |
 | **4** | CI / supply chain | Documented | `npm run audit:deps`; Semgrep not enrolled |
 | **5** | Optional advanced | Deferred | Bot Management, Cloudflare, insurance — recommend only |
 
@@ -147,13 +147,13 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 
 **Intent:** Buy depth only when abuse, compliance, or insurance needs it.
 
-| # | Option | When to consider |
-|---|--------|------------------|
-| 5.1 | Vercel Bot Management / managed WAF rulesets | Sustained bot/abuse beyond custom rules |
-| 5.2 | Cloudflare (or similar) in front of Vercel | Extra WAF/CDN control; usually redundant |
-| 5.3 | E&O / cyber insurance | Ops/legal pack; not a website control |
-| 5.4 | External pen test / bug bounty | After Phases 1–3 stable |
-| 5.5 | Formal compliance program (e.g. SOC 2) | Business-driven; never implied by Phase 1 headers |
+| # | Option | Status (2026-10-17) | When to consider |
+|---|--------|---------------------|------------------|
+| 5.1 | Vercel Bot Management / managed WAF rulesets | **Not purchased** | Sustained bot/abuse beyond custom rules |
+| 5.2 | Cloudflare (or similar) in front of Vercel | **Not in front of Vercel** (Turnstile widgets only) | Extra WAF/CDN control; usually redundant |
+| 5.3 | E&O / cyber insurance | **Owner/counsel** | Ops/legal pack; not a website control |
+| 5.4 | External pen test / bug bounty | **Not started** | After Phases 1–3 stable |
+| 5.5 | Formal compliance program (e.g. SOC 2) | **Do not claim** | Business-driven; never implied by Phase 1 headers |
 
 ---
 

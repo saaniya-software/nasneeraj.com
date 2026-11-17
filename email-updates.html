@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email updates — Saaniya Software LLC</title>
+    <meta name="description" content="Opt in to product email updates from Saaniya Software LLC for GuruVidyaZen / Riyaz Studio and the Vedic astrology book + CoPlanner.">
+    <link rel="canonical" href="https://saaniya-software.com/email-updates">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saaniya-software.com/email-updates">
+    <meta property="og:title" content="Email updates — Saaniya Software LLC">
+    <meta property="og:description" content="Get product updates by email. Unsubscribe any time.">
+    <meta property="og:image" content="https://saaniya-software.com/assets/Saaniyalogo.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fffbf5;
+        }
+        .navbar {
+            background: #fffbf5;
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-logo img { height: 80px; width: auto; }
+        .nav-logo-text { font-size: 1.3em; font-weight: bold; color: #667eea; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+        h1 {
+            color: #1e293b;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .lead { color: #475569; margin-bottom: 32px; font-size: 1.05rem; }
+        .form-section {
+            background: #f8f9fa;
+            padding: 40px 32px;
+            border-radius: 15px;
+        }
+        .form-group { margin-bottom: 22px; }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .interest-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .interest-list label,
+        .consent-row label {
+            font-weight: 500;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+        .interest-list input,
+        .consent-row input {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.05em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn:disabled { opacity: 0.7; cursor: wait; }
+        .privacy-line {
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+        .privacy-line a { color: #667eea; }
+        .form-status {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            display: none;
+            font-size: 0.95rem;
+        }
+        .form-status.ok {
+            display: block;
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .form-status.err {
+            display: block;
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+        .footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer a { color: #a5b4fc; }
+        .hp {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC">
+                <span class="nav-logo-text">Saaniya Software LLC</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Email updates</h1>
+        <p class="lead">
+            Opt in for product news from Saaniya Software LLC. Choose only what you want.
+            We will not send bulk marketing until our Privacy Policy marketing section is live;
+            signing up now puts you on the list for when that starts.
+        </p>
+
+        <div class="form-section">
+            <form id="subscribeForm" method="POST" action="/api/subscribe" novalidate>
+                <div class="form-group hp" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="first_name">First name <span style="font-weight:400;color:#64748b;">(optional)</span></label>
+                    <input type="text" id="first_name" name="first_name" autocomplete="given-name">
+                </div>
+
+                <fieldset class="form-group" style="border:none;padding:0;">
+                    <legend style="font-weight:600;margin-bottom:10px;">I’m interested in</legend>
+                    <ul class="interest-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="interests" value="zen">
+                                <span>GuruVidyaZen / Riyaz Studio</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="interests" value="book_coplanner">
+                                <span>Book + CoPlanner</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <div class="form-group consent-row">
+                    <label>
+                        <input type="checkbox" id="consent" name="consent" value="true" required>
+                        <span>Yes, send me email updates from Saaniya Software LLC about the products I checked above. I can unsubscribe at any time.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">Join the list</button>
+                <p class="privacy-line">
+                    We use your email only for the updates you chose.
+                    See our <a href="privacy.html">Privacy Policy</a>.
+                </p>
+                <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="nas-copyright-year">2026</span> Saaniya Software LLC</p>
+        <p style="margin-top:10px;"><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a></p>
+        <script>
+            (function () {
+                var el = document.getElementById('nas-copyright-year');
+                if (el) el.textContent = String(new Date().getFullYear());
+            })();
+        </script>
+    </footer>
+
+    <script>
+    (function () {
+        var form = document.getElementById('subscribeForm');
+        var statusEl = document.getElementById('formStatus');
+        var btn = document.getElementById('submitBtn');
+
+        function showStatus(kind, text) {
+            statusEl.className = 'form-status ' + kind;
+            statusEl.textContent = text;
+        }
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            statusEl.className = 'form-status';
+            statusEl.textContent = '';
+
+            var email = form.email.value.trim();
+            var firstName = form.first_name.value.trim();
+            var consent = form.consent.checked;
+            var interests = Array.prototype.slice.call(form.querySelectorAll('input[name="interests"]:checked'))
+                .map(function (el) { return el.value; });
+
+            if (!email) {
+                showStatus('err', 'Please enter a valid email');
+                return;
+            }
+            if (interests.length === 0) {
+                showStatus('err', 'Please choose at least one interest.');
+                return;
+            }
+            if (!consent) {
+                showStatus('err', 'Please confirm consent to receive updates.');
+                return;
+            }
+
+            btn.disabled = true;
+            try {
+                var response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        first_name: firstName || undefined,
+                        interests: interests,
+                        consent: true,
+                        source_page: 'saaniya-software.com/email-updates',
+                        website: form.website ? form.website.value : ''
+                    })
+                });
+                var data = {};
+                try { data = await response.json(); } catch (e) { /* ignore */ }
+
+                if (!response.ok) {
+                    showStatus('err', data.error || 'Please enter a valid email');
+                    return;
+                }
+                showStatus('ok', data.message || "Thanks — you're on the list. Watch for a welcome email soon.");
+                form.reset();
+            } catch (err) {
+                showStatus('err', 'Something went wrong. Please try again or email hello@saaniya-software.com');
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    })();
+    </script>
+    <script src="assets/site-nav.js?v=20261009c"></script>
+<script src="/assets/cookie-consent.js?v=20261013a" data-saaniya-cookie="1" defer></script>
+</body>
+</html>

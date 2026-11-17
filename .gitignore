@@ -5,6 +5,8 @@ node_modules
 .env
 .env.*
 !.env*.example
+docs/resendkey.txt
+**/resendkey.txt
 
 C&N_India_0070(1).jpg
 

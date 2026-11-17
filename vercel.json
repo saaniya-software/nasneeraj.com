@@ -225,6 +225,14 @@
       "destination": "/signup.html"
     },
     {
+      "source": "/email-updates",
+      "destination": "/email-updates.html"
+    },
+    {
+      "source": "/newsletter",
+      "destination": "/email-updates.html"
+    },
+    {
       "source": "/demo",
       "destination": "/demo.html"
     },
