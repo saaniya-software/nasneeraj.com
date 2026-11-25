@@ -24,11 +24,12 @@ function walk(dir, out = []) {
 const failures = [];
 for (const rel of walk(root)) {
   const text = readFileSync(join(root, rel), "utf8");
+  const hasSubprocessors = /subprocessors\.html|\/subprocessors/i.test(text);
   const hasUnsub = /unsubscribe\.html|\/unsubscribe|href="unsubscribe/i.test(text);
   const hasCookies = /cookies\.html|\/cookies|href="cookies/i.test(text);
   const hasSettings = /saaniya-cookie-settings-link|Cookie settings/i.test(text);
-  if (!hasUnsub || !hasCookies || !hasSettings) {
-    failures.push({ rel, hasUnsub, hasCookies, hasSettings });
+  if (!hasSubprocessors || !hasUnsub || !hasCookies || !hasSettings) {
+    failures.push({ rel, hasSubprocessors, hasUnsub, hasCookies, hasSettings });
   }
 }
 

@@ -5,13 +5,14 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname } from "node:path";
 
 const root = process.cwd();
-const LEGAL_BLOCK = (prefix) => `            <a href="${prefix}unsubscribe.html">Email preferences</a>
+const LEGAL_BLOCK = (prefix) => `            <a href="${prefix}subprocessors.html">Subprocessors</a>
+            <a href="${prefix}unsubscribe.html">Email preferences</a>
             <a href="${prefix}cookies.html">Cookie Policy</a>
             <a href="#" class="saaniya-cookie-settings-link">Cookie settings</a>
 `;
 
 const LEGAL_SCRIPT =
-  '<script src="/assets/site-legal-footer.js?v=20261125b" defer></script>\n';
+  '<script src="/assets/site-legal-footer.js?v=20261126a" defer></script>\n';
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
@@ -45,15 +46,18 @@ function patchFile(file) {
   const prefix = depthPrefix(file);
   let changed = false;
 
+  const needSubprocessors = !/subprocessors\.html|\/subprocessors/i.test(text);
   const needUnsub = !/unsubscribe\.html|\/unsubscribe/i.test(text);
   const needCookies = !/cookies\.html|\/cookies(?!-consent)/i.test(text);
   const needSettings = !/saaniya-cookie-settings-link|Cookie settings/i.test(text);
 
-  if (needUnsub || needCookies || needSettings) {
+  if (needSubprocessors || needUnsub || needCookies || needSettings) {
     if (text.includes('class="footer-links"') || text.includes("class='footer-links'")) {
       const tagPattern = /<(?:div|nav) class="footer-links"[^>]*>\s*([\s\S]*?)\s*<\/(?:div|nav)>/g;
       text = text.replace(tagPattern, (m, inner) => {
         let add = "";
+        if (needSubprocessors && !/subprocessors/i.test(inner))
+          add += `            <a href="${prefix}subprocessors.html">Subprocessors</a>\n`;
         if (needUnsub && !/unsubscribe/i.test(inner)) add += `            <a href="${prefix}unsubscribe.html">Email preferences</a>\n`;
         if (needCookies && !/cookies\.html|href="\/cookies/i.test(inner))
           add += `            <a href="${prefix}cookies.html">Cookie Policy</a>\n`;

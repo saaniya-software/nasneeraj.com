@@ -155,6 +155,14 @@
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
     </url>
+
+    <!-- Subprocessors -->
+    <url>
+        <loc>https://www.saaniya-software.com/subprocessors</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
     
     <!-- Disclaimer -->
     <url>
