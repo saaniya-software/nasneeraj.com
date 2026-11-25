@@ -237,6 +237,10 @@
       "destination": "/cookies.html"
     },
     {
+      "source": "/subprocessors",
+      "destination": "/subprocessors.html"
+    },
+    {
       "source": "/cookie-policy",
       "destination": "/cookies.html"
     },

@@ -6,6 +6,7 @@
   window.__saaniyaLegalFooter = true;
 
   var LEGAL = [
+    { href: "/subprocessors.html", text: "Subprocessors", match: /subprocessors/i },
     { href: "/unsubscribe.html", text: "Email preferences", match: /unsubscribe/i },
     { href: "/cookies.html", text: "Cookie Policy", match: /cookies\.html|\/cookies/i },
     { href: "#", text: "Cookie settings", match: /cookie settings/i, className: "saaniya-cookie-settings-link" },
@@ -129,6 +130,7 @@
       '<a href="privacy.html">Legal</a>' +
       '<div class="dropdown-menu">' +
       '<a href="privacy.html">Privacy Policy</a>' +
+      '<a href="subprocessors.html">Subprocessors</a>' +
       '<a href="terms.html">Terms</a>' +
       '<a href="disclaimer.html">Disclaimer</a>' +
       '<a href="cookies.html">Cookie Policy</a>' +
