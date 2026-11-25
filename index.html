@@ -526,6 +526,22 @@
             aspect-ratio: 4 / 3;
         }
 
+        .hero-figure--reel {
+            max-width: 100%;
+            margin-left: auto;
+            background: #000;
+        }
+
+        .hero-figure--reel video {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: min(52vh, 420px);
+            object-fit: contain;
+            background: #000;
+            aspect-ratio: 16 / 9;
+        }
+
         .hero-figure--1,
         .hero-figure--2 {
             position: relative;
@@ -1180,7 +1196,8 @@
             }
 
             .hero-figure--1,
-            .hero-figure--2 {
+            .hero-figure--2,
+            .hero-figure--reel {
                 position: relative;
                 transform: none;
                 max-width: 100%;
@@ -1305,26 +1322,19 @@
                     <a href="upwork.html" class="btn btn-secondary">Upwork</a>
                 </div>
             </div>
-            <div class="hero-visual" aria-label="Product imagery">
-                <figure class="hero-figure hero-figure--1">
-                    <img
-                        src="assets/home/home-learning-pause.png"
-                        width="400"
-                        height="300"
-                        alt="Students and technology working together in a learning environment"
-                        loading="eager"
-                    />
-                    <figcaption>Education &amp; school programs</figcaption>
-                </figure>
-                <figure class="hero-figure hero-figure--2">
-                    <img
-                        src="assets/home/home-arts-pause.png"
-                        width="400"
-                        height="300"
-                        alt="Piano and arts learning, reflecting academy and Gurukul-style programs"
-                        loading="eager"
-                    />
-                    <figcaption>Academies, arts &amp; productivity</figcaption>
+            <div class="hero-visual" aria-label="Company reel">
+                <figure class="hero-figure hero-figure--reel">
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                        width="1280"
+                        height="720"
+                        aria-label="Saaniya Software LLC company reel"
+                    >
+                        <source src="assets/home/saaniya-instagram-reel.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Saaniya Software LLC</figcaption>
                 </figure>
             </div>
         </div>
