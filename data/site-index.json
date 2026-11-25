@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-25T17:24:44.925Z",
+  "builtAt": "2026-11-25T17:53:33.326Z",
   "chunks": [
     {
       "id": "/astrology-guide#0",
@@ -851,7 +851,7 @@
       "id": "/subprocessors#0",
       "path": "/subprocessors",
       "title": "Subprocessors — Saaniya Software LLC",
-      "text": "Subprocessors — Saaniya Software LLC Subprocessors Last updated: November 25, 2026 These are the third-party vendors and service providers that process personal information on behalf of Saaniya Software LLC. See also our Privacy Policy . Questions about this list: support@saaniya-software.com . Live vendors Vendor Purpose Categories of data processed Status Anthropic AI inference for CoPlanner (model picker fallback; briefings) User content the user asks the agent to process (mail, calendar, tasks, files), per the stated agent purpose Live Apple Inc. Sign in with Apple (CoPlanner sign-in); App Store payment processing for iOS in-app purchases Account identifiers; purchase records (Apple processes card details) Live Cloudflare (Turnstile) Bot protection on login and signup Browser and device signals from the Turnstile challenge Live Clerk Authentication for Fleet Manager Account"
+      "text": "Subprocessors — Saaniya Software LLC Subprocessors Last updated: December 3, 2026 These are the third-party vendors and service providers that process personal information on behalf of Saaniya Software LLC. See also our Privacy Policy . Questions about this list: support@saaniya-software.com . Live vendors Vendor Purpose Categories of data processed Status Anthropic AI inference for CoPlanner (model picker fallback; briefings) User content the user asks the agent to process (mail, calendar, tasks, files), per the stated agent purpose Live Apple Inc. Sign in with Apple (CoPlanner sign-in); App Store payment processing for iOS in-app purchases Account identifiers; purchase records (Apple processes card details) Live Cloudflare (Turnstile) Bot protection on login and signup Browser and device signals from the Turnstile challenge Live Clerk Authentication for Fleet Manager Account"
     },
     {
       "id": "/subprocessors#1",
