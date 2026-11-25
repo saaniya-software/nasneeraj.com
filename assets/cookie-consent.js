@@ -86,12 +86,12 @@
     document.head.appendChild(style);
   }
 
-  function showBanner() {
-    if (gpcOn()) {
+  function showBanner(force) {
+    if (!force && gpcOn()) {
       write("essential");
       return;
     }
-    if (read() === "essential" || read() === "all") return;
+    if (!force && (read() === "essential" || read() === "all")) return;
 
     injectStyles();
     var banner = document.createElement("div");
@@ -119,8 +119,15 @@
       window.location.href = "/cookies.html#preferences";
     });
 
+    var old = document.getElementById("saaniya-cookie-banner");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
     document.body.appendChild(banner);
   }
+
+  window.saaniyaOpenCookiePreferences = function () {
+    injectStyles();
+    showBanner(true);
+  };
 
   function init() {
     if (gpcOn()) write("essential");

@@ -139,6 +139,22 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+
+    <!-- Cookie Policy -->
+    <url>
+        <loc>https://saaniya-software.com/cookies.html</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Email unsubscribe -->
+    <url>
+        <loc>https://saaniya-software.com/unsubscribe.html</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
     
     <!-- Disclaimer -->
     <url>
