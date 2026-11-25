@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy — Saaniya Software LLC</title>
+    <meta name="description" content="How Saaniya Software LLC uses cookies and similar technologies on saaniya-software.com.">
+    <link rel="canonical" href="https://saaniya-software.com/cookies">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.65;
+            color: #1e293b;
+            background: #fffbf5;
+        }
+        .navbar { background: #fffbf5; box-shadow: 0 2px 12px rgba(30,41,59,.06); padding: 14px 0; }
+        .nav-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; font-weight: 700; color: #667eea; }
+        .nav-logo img { height: 56px; }
+        main { max-width: 800px; margin: 0 auto; padding: 36px 20px 72px; }
+        h1 { font-size: 2rem; margin-bottom: 8px; }
+        h2 { margin-top: 28px; font-size: 1.25rem; color: #334155; }
+        p, li { color: #475569; margin-top: 10px; }
+        ul { margin-left: 1.25rem; }
+        a { color: #667eea; }
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.95rem; }
+        th, td { border: 1px solid #e2e8f0; padding: 10px; text-align: left; }
+        th { background: #f1f5f9; }
+        .prefs { background: #f8fafc; border-radius: 12px; padding: 20px; margin-top: 16px; }
+        .prefs button {
+            margin-top: 12px;
+            margin-right: 8px;
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .essential { background: #334155; color: #fff; }
+        .all { background: #6366f1; color: #fff; }
+        .footer { background: #1e293b; color: #fff; text-align: center; padding: 32px 20px; margin-top: 40px; }
+        .footer a { color: #a5b4fc; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Site">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span>Saaniya Software LLC</span>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <h1>Cookie Policy</h1>
+        <p>Last updated: November 25, 2026</p>
+        <p>
+            This policy explains how <strong>Saaniya Software LLC</strong> uses cookies and similar technologies on
+            <a href="https://saaniya-software.com">saaniya-software.com</a> and related marketing pages served from this site.
+        </p>
+
+        <h2 id="preferences">Your preferences</h2>
+        <div class="prefs" role="region" aria-label="Cookie preferences">
+            <p id="prefStatus">Loading your saved choice…</p>
+            <button type="button" class="essential" id="prefEssential">Essential only</button>
+            <button type="button" class="all" id="prefAnalytics">Allow analytics</button>
+        </div>
+        <p>We honor <strong>Global Privacy Control (GPC)</strong> when your browser sends it — analytics stays off.</p>
+
+        <h2>Categories</h2>
+        <table>
+            <thead>
+                <tr><th>Name / storage</th><th>Purpose</th><th>Category</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>saaniya-cookie-consent</code> (localStorage)</td>
+                    <td>Stores Essential vs analytics choice</td>
+                    <td>Essential</td>
+                </tr>
+                <tr>
+                    <td>Language preference (<code>saaniya-site-lang</code>, Google Translate)</td>
+                    <td>Remember selected language</td>
+                    <td>Essential (functional)</td>
+                </tr>
+                <tr>
+                    <td>Vercel Web Analytics</td>
+                    <td>Aggregate, first-party usage metrics</td>
+                    <td>Analytics — only after consent; not loaded when GPC is on</td>
+                </tr>
+                <tr>
+                    <td>Cloudflare Turnstile</td>
+                    <td>Bot protection on forms (contact, unsubscribe)</td>
+                    <td>Essential (security)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Essential cookies</h2>
+        <p>Required for security, consent storage, and basic site features. These cannot be turned off on this marketing site.</p>
+
+        <h2>Analytics</h2>
+        <p>Optional. We use privacy-oriented, first-party analytics (Vercel Web Analytics) to understand aggregate traffic. We do not use analytics for advertising profiles on this site.</p>
+
+        <h2>More information</h2>
+        <p>See our <a href="/privacy.html">Privacy Policy</a>. Questions: <a href="mailto:hello@saaniya-software.com">hello@saaniya-software.com</a>.</p>
+    </main>
+    <footer class="footer">
+        <a href="/">Home</a> ·
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="/unsubscribe.html">Unsubscribe</a> ·
+        <a href="/contact.html">Contact</a>
+    </footer>
+    <script src="/assets/cookie-consent.js?v=20261125a" data-saaniya-cookie="1" defer></script>
+    <script>
+    (function () {
+        var KEY = 'saaniya-cookie-consent';
+        var status = document.getElementById('prefStatus');
+        function render() {
+            var v = '';
+            try { v = localStorage.getItem(KEY) || ''; } catch (e) { /* ignore */ }
+            if (v === 'all') status.textContent = 'Current choice: Essential + analytics.';
+            else if (v === 'essential') status.textContent = 'Current choice: Essential only.';
+            else status.textContent = 'No choice saved yet — use the banner or the buttons below.';
+        }
+        document.getElementById('prefEssential').addEventListener('click', function () {
+            window.saaniyaSetCookieConsent && window.saaniyaSetCookieConsent('essential');
+            render();
+        });
+        document.getElementById('prefAnalytics').addEventListener('click', function () {
+            window.saaniyaSetCookieConsent && window.saaniyaSetCookieConsent('all');
+            render();
+        });
+        window.addEventListener('saaniya-cookie-consent', render);
+        render();
+    })();
+    </script>
+</body>
+</html>

@@ -27,9 +27,46 @@
 
 Never commit `docs/resendkey.txt` (gitignored).
 
-## Endpoint
+## Endpoints
 
-`POST /api/subscribe` — honeypot + ~5/IP/hour; writes Resend audiences; optional consent mirror.
+| Route | Method | Purpose |
+|-------|--------|---------|
+| `/api/subscribe` | POST | Opt-in — honeypot + ~5/IP/hour; Resend audiences; optional consent mirror |
+| `/api/unsubscribe` | POST | Opt-out — Resend `unsubscribed: true`; Turnstile unless one-click token |
+| `/unsubscribe` | GET | Public form (alias via `vercel.json`) |
+
+### List-Unsubscribe (RFC 8058)
+
+In each marketing email header:
+
+```text
+List-Unsubscribe: <https://saaniya-software.com/unsubscribe?email=ENCODED&token=SIGNED>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+```
+
+One-click POST target (same query string):
+
+`POST https://saaniya-software.com/api/unsubscribe?email=...&token=...`  
+Body: `List-Unsubscribe=One-Click`
+
+Sign `token` with HMAC (`api/lib/unsubscribe-token.js`). Env: **`UNSUBSCRIBE_SIGNING_SECRET`** (32+ random bytes).
+
+Generate a link locally:
+
+```bash
+UNSUBSCRIBE_SIGNING_SECRET=your-secret node -e "
+  process.env.UNSUBSCRIBE_SIGNING_SECRET='your-secret';
+  const { signUnsubscribeToken } = require('./api/lib/unsubscribe-token');
+  console.log(signUnsubscribeToken('user@example.com', []));
+"
+```
+
+## Unsubscribe env (additional)
+
+| Var | Purpose |
+|-----|---------|
+| `UNSUBSCRIBE_SIGNING_SECRET` | HMAC for email / one-click links |
+| `TURNSTILE_SITE_KEY` / `TURNSTILE_SECRET_KEY` | Bot protection on manual unsubscribe form |
 
 ## Send gate
 
