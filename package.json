@@ -8,6 +8,7 @@
     "verify:chat": "node scripts/verify-saaniya-chat.mjs",
     "audit:deps": "npm audit --omit=dev --audit-level=high",
     "test": "node --test tests/*.test.js",
+    "verify:legal-links": "node scripts/verify-legal-links.mjs",
     "build": "bash build.sh"
   },
   "dependencies": {
