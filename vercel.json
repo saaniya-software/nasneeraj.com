@@ -229,6 +229,18 @@
       "destination": "/email-updates.html"
     },
     {
+      "source": "/unsubscribe",
+      "destination": "/unsubscribe.html"
+    },
+    {
+      "source": "/cookies",
+      "destination": "/cookies.html"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookies.html"
+    },
+    {
       "source": "/newsletter",
       "destination": "/email-updates.html"
     },

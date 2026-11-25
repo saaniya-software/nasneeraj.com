@@ -6,7 +6,9 @@
   "scripts": {
     "phase:deploy": "node scripts/phase-deploy.mjs",
     "verify:chat": "node scripts/verify-saaniya-chat.mjs",
-    "audit:deps": "npm audit --omit=dev --audit-level=high"
+    "audit:deps": "npm audit --omit=dev --audit-level=high",
+    "test": "node --test tests/*.test.js",
+    "build": "bash build.sh"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",

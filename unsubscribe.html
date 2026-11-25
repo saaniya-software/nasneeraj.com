@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsubscribe — Saaniya Software LLC</title>
+    <meta name="description" content="Unsubscribe from marketing email updates from Saaniya Software LLC.">
+    <link rel="canonical" href="https://saaniya-software.com/unsubscribe">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saaniya-software.com/unsubscribe">
+    <meta property="og:title" content="Unsubscribe — Saaniya Software LLC">
+    <meta property="og:image" content="https://saaniya-software.com/assets/Saaniyalogo.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fffbf5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background: #fffbf5;
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-logo img { height: 64px; width: auto; }
+        .nav-logo-text { font-size: 1.15em; font-weight: bold; color: #667eea; }
+        main.container {
+            flex: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            width: 100%;
+        }
+        h1 { color: #1e293b; font-size: 2rem; margin-bottom: 12px; }
+        .lead { color: #475569; margin-bottom: 28px; font-size: 1.05rem; }
+        .form-section {
+            background: #f8f9fa;
+            padding: 32px 28px;
+            border-radius: 15px;
+        }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        input[type="email"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .interest-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .interest-list label {
+            font-weight: 500;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+        .btn {
+            padding: 14px 32px;
+            font-size: 1.05em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn:disabled { opacity: 0.7; cursor: wait; }
+        .btn-secondary-inline {
+            display: inline-block;
+            margin-top: 16px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .form-status {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            display: none;
+            font-size: 0.95rem;
+        }
+        .form-status.ok {
+            display: block;
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .form-status.err {
+            display: block;
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+        .hp {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 36px 20px;
+        }
+        .footer a { color: #a5b4fc; }
+        #turnstileMount { min-height: 65px; }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.65rem; }
+            .form-section { padding: 24px 18px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Site">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span class="nav-logo-text">Saaniya Software LLC</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Unsubscribe</h1>
+        <p class="lead">
+            Stop marketing email updates from Saaniya Software LLC. Product and billing messages for active accounts may still apply under your agreement.
+        </p>
+
+        <div class="form-section">
+            <form id="unsubForm" novalidate>
+                <div class="form-group hp" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" aria-required="true">
+                </div>
+
+                <fieldset class="form-group" style="border:none;padding:0;margin:0;">
+                    <legend style="font-weight:600;margin-bottom:10px;">Lists to leave <span style="font-weight:400;color:#64748b;">(leave all unchecked to unsubscribe from every marketing list)</span></legend>
+                    <ul class="interest-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="interests" value="zen">
+                                <span>GuruVidyaZen / Riyaz Studio updates only</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="interests" value="book_coplanner">
+                                <span>Book + CoPlanner updates only</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="reason">Reason <span style="font-weight:400;color:#64748b;">(optional)</span></label>
+                    <select id="reason" name="reason" aria-describedby="reason-help">
+                        <option value="">Prefer not to say</option>
+                        <option value="too_frequent">Emails too frequent</option>
+                        <option value="not_relevant">Content not relevant</option>
+                        <option value="never_signed_up">I never signed up</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <p id="reason-help" style="font-size:0.85rem;color:#64748b;margin-top:6px;">Reasons are stored only in our server logs for product improvement (not shared).</p>
+                </div>
+
+                <div class="form-group" id="turnstileMount" aria-label="Security check"></div>
+
+                <button type="submit" class="btn" id="submitBtn">Confirm unsubscribe</button>
+                <p style="margin-top:14px;font-size:0.9rem;color:#64748b;text-align:center;">
+                    Want to stay on the list? <a href="/email-updates">Email updates signup</a>
+                </p>
+                <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+            </form>
+            <a class="btn-secondary-inline" href="/privacy.html">Privacy Policy</a>
+            <a class="btn-secondary-inline" href="/cookies.html" style="margin-left:12px;">Cookie Policy</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="nas-copyright-year">2026</span> Saaniya Software LLC</p>
+        <p style="margin-top:10px;">
+            <a href="/">Home</a> ·
+            <a href="/email-updates">Email updates</a> ·
+            <a href="/contact">Contact</a>
+        </p>
+        <script>
+            (function () {
+                var el = document.getElementById('nas-copyright-year');
+                if (el) el.textContent = String(new Date().getFullYear());
+            })();
+        </script>
+    </footer>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+    <script>
+    (function () {
+        var form = document.getElementById('unsubForm');
+        var statusEl = document.getElementById('formStatus');
+        var btn = document.getElementById('submitBtn');
+        var tokenFromUrl = null;
+        var turnstileWidgetId = null;
+
+        var params = new URLSearchParams(window.location.search);
+        var emailParam = params.get('email');
+        var tokenParam = params.get('token');
+        if (emailParam) {
+            try {
+                form.email.value = decodeURIComponent(emailParam);
+            } catch (e) {
+                form.email.value = emailParam;
+            }
+        }
+        if (tokenParam) tokenFromUrl = tokenParam;
+
+        function showStatus(kind, text) {
+            statusEl.className = 'form-status ' + kind;
+            statusEl.textContent = text;
+        }
+
+        function renderTurnstile(siteKey) {
+            if (!window.turnstile || !siteKey) return;
+            var mount = document.getElementById('turnstileMount');
+            turnstileWidgetId = window.turnstile.render(mount, {
+                sitekey: siteKey,
+                theme: 'light',
+            });
+        }
+
+        fetch('/api/public-config')
+            .then(function (r) { return r.json(); })
+            .then(function (cfg) {
+                function tryRender() {
+                    if (window.turnstile) renderTurnstile(cfg.turnstileSiteKey);
+                    else setTimeout(tryRender, 80);
+                }
+                tryRender();
+            })
+            .catch(function () { /* Turnstile optional when secret unset server-side */ });
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            statusEl.className = 'form-status';
+            statusEl.textContent = '';
+
+            var email = form.email.value.trim();
+            if (!email) {
+                showStatus('err', 'Please enter your email address.');
+                form.email.focus();
+                return;
+            }
+
+            var interests = Array.prototype.slice.call(form.querySelectorAll('input[name="interests"]:checked'))
+                .map(function (el) { return el.value; });
+
+            var turnstileToken = '';
+            if (window.turnstile && turnstileWidgetId !== null) {
+                turnstileToken = window.turnstile.getResponse(turnstileWidgetId) || '';
+            }
+
+            btn.disabled = true;
+            try {
+                var body = {
+                    email: email,
+                    interests: interests,
+                    reason: form.reason.value || undefined,
+                    website: form.website ? form.website.value : '',
+                };
+                if (tokenFromUrl) body.token = tokenFromUrl;
+                if (turnstileToken) body['cf-turnstile-response'] = turnstileToken;
+
+                var response = await fetch('/api/unsubscribe' + (tokenFromUrl ? ('?token=' + encodeURIComponent(tokenFromUrl)) : ''), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body),
+                });
+                var data = {};
+                try { data = await response.json(); } catch (e) { /* ignore */ }
+
+                if (!response.ok) {
+                    showStatus('err', data.error || 'Something went wrong. Please try again.');
+                    if (window.turnstile && turnstileWidgetId !== null) window.turnstile.reset(turnstileWidgetId);
+                    return;
+                }
+                showStatus('ok', data.message || 'You have been unsubscribed.');
+                form.querySelector('fieldset').style.display = 'none';
+                btn.style.display = 'none';
+            } catch (err) {
+                showStatus('err', 'Network error. Please try again or email hello@saaniya-software.com');
+                if (window.turnstile && turnstileWidgetId !== null) window.turnstile.reset(turnstileWidgetId);
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    })();
+    </script>
+    <script src="/assets/cookie-consent.js?v=20261125a" data-saaniya-cookie="1" defer></script>
+</body>
+</html>
