@@ -291,6 +291,78 @@
             color: #667eea;
             padding-left: 25px;
         }
+
+        .tour-videos {
+            margin: 0 0 40px;
+            padding-bottom: 8px;
+        }
+
+        .tour-videos h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 0 0 24px;
+            text-align: center;
+        }
+
+        .tour-row {
+            margin-bottom: 32px;
+        }
+
+        .tour-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .tour-row h3 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 16px;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 700px) {
+            .tour-grid--two {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .tour-video {
+            margin: 0;
+        }
+
+        .tour-video__frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tour-video__frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .tour-video figcaption {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .tour-video figcaption .tour-duration {
+            font-weight: 500;
+            color: #666;
+        }
     </style>
 <link rel="stylesheet" href="assets/site-sidebar.css?v=20261009c">
     <link rel="stylesheet" href="assets/page-scenes.css?v=20260923m">
@@ -346,6 +418,69 @@
         <h1>Request a Demo</h1>
         <p class="subtitle">See our platforms in action with a personalized demonstration</p>
         <img class="page-scene" src="assets/pages/demo-hero.png" alt="The Saaniya mascot starting a demo on a laptop">
+
+        <!--
+          Tour videos use individual youtube-nocookie embeds.
+          A public playlist titled "First look at GuruVidyaZen" was preferred
+          for the admin row so Admin Parts 3–5 would appear automatically, but
+          as of 2026-11-25 the Saaniya Software LLC channel
+          (UCujh7xW9HhYi-tR_UlFYQNg) has no public playlist by that name.
+          Add Admin Tour Part 3 to the academies row when it is published.
+        -->
+        <section class="tour-videos" id="watch-the-tour" aria-labelledby="watch-the-tour-heading">
+            <h2 id="watch-the-tour-heading">Watch the tour</h2>
+
+            <div class="tour-row">
+                <h3>For academies: Admin tour</h3>
+                <div class="tour-grid tour-grid--two">
+                    <figure class="tour-video">
+                        <div class="tour-video__frame">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/i6gI7_iZua8?rel=0&amp;modestbranding=1"
+                                title="Admin Tour Part 1: People &amp; Data"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                        <figcaption>Admin Tour Part 1: People &amp; Data <span class="tour-duration">(5:42)</span></figcaption>
+                    </figure>
+                    <figure class="tour-video">
+                        <div class="tour-video__frame">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/k1oI4-uc_to?rel=0&amp;modestbranding=1"
+                                title="Admin Tour Part 2: Batches, Rosters &amp; Calendar"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                        <figcaption>Admin Tour Part 2: Batches, Rosters &amp; Calendar <span class="tour-duration">(8:55)</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="tour-row">
+                <h3>For schools: Parent tour</h3>
+                <div class="tour-grid">
+                    <figure class="tour-video">
+                        <div class="tour-video__frame">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/F7mmzVEwB3Q?rel=0&amp;modestbranding=1"
+                                title="Parent Tour: School SISLMS (K–8)"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                        <figcaption>Parent Tour: School SISLMS (K–8) <span class="tour-duration">(9:21)</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
         <div class="success-message" id="successMessage">
             <strong>Thank you!</strong> Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration.
