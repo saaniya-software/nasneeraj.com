@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subprocessors — Saaniya Software LLC</title>
     <meta name="description" content="Third-party vendors and service providers that process personal information on behalf of Saaniya Software LLC.">
+    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://saaniya-software.com/subprocessors">
     <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
     <style>
@@ -65,7 +66,8 @@
 
     <div class="content">
         <h1>Subprocessors</h1>
-        <p class="meta"><strong>Last updated:</strong> November 25, 2026</p>
+        <p class="draft-banner" role="status">DRAFT — For counsel review only. To be published December 3, 2026.</p>
+        <p class="meta"><strong>Last updated:</strong> December 3, 2026</p>
         <p>These are the third-party vendors and service providers that process personal information on behalf of Saaniya Software LLC.</p>
         <p>See also our <a href="privacy.html">Privacy Policy</a>. Questions about this list: <a href="mailto:support@saaniya-software.com">support@saaniya-software.com</a>.</p>
 
@@ -101,7 +103,7 @@
                     </tr>
                     <tr>
                         <td>Clerk</td>
-                        <td>Authentication for Fleet Manager</td>
+                        <td>Authentication for Fleet Manager (provisioned via the Vercel Marketplace)</td>
                         <td>Account identifiers and sign-in data</td>
                         <td>Live</td>
                     </tr>
@@ -149,7 +151,7 @@
                     </tr>
                     <tr>
                         <td>Resend</td>
-                        <td>Transactional and marketing email delivery (account emails; Resend Broadcasts to opted-in audiences)</td>
+                        <td>Transactional and marketing email delivery (CoPlanner password-reset emails, and CoPlanner verification emails when that feature is enabled in production; Fleet Manager booking and invoice emails; GuruVidyaZen academy notifications; Resend Broadcasts to opted-in audiences on saaniya-software.com)</td>
                         <td>Recipient email addresses and message content</td>
                         <td>Live</td>
                     </tr>
@@ -173,8 +175,8 @@
                     </tr>
                     <tr>
                         <td>Vercel Inc.</td>
-                        <td>Hosting and deployment for the CoPlanner web application (and Vercel Blob file storage)</td>
-                        <td>Account, usage, and content data served by the application</td>
+                        <td>Hosting and deployment for Saaniya web applications (including CoPlanner and Fleet Manager). Vercel Blob stores Fleet Manager documents uploaded in the app.</td>
+                        <td>Account, usage, and content data served by the applications, including Fleet Manager documents stored in Vercel Blob</td>
                         <td>Live</td>
                     </tr>
                     <tr>
@@ -221,6 +223,15 @@
                 </tbody>
             </table>
         </div>
+
+        <h2>Change log</h2>
+        <ul class="changelog">
+            <li>2026-11-25: Clarified Resend (which products send email), Vercel Blob (Fleet Manager documents, not CoPlanner), and Clerk (Vercel Marketplace) after a repo review.</li>
+            <li>2026-11-19: Initial list compiled from draft Privacy §6, the 17 Nov TOU/Privacy gap assessment, and the CoPlanner repo. Meta (Model API / Muse models) added as coming soon for CoPlanner v2. Duffel and Razorpay listed as planned, not yet in use.</li>
+            <li>2026-11-19: Vonage removed (Neeraj). Google Maps Platform confirmed for Fleet Manager; Google Classroom confirmed for GuruVidyaZen.</li>
+            <li>2026-11-19: Meta entry clarified — the user's own Muse (path 3) is not a Saaniya subprocessor; only Meta's Model API (path 1) is.</li>
+            <li>2026-11-25: Page brief created for Cursor from the 19 Nov list (20 vendors: 17 live, 3 planned / coming soon). Page URL proposed: /subprocessors.</li>
+        </ul>
 
     </div>
 
