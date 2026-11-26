@@ -363,6 +363,36 @@
             font-weight: 500;
             color: #666;
         }
+
+        .tour-reels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .tour-reel {
+            flex: 1 1 328px;
+            max-width: 400px;
+            min-width: 326px;
+            margin: 0;
+        }
+
+        .tour-reel .instagram-media {
+            margin: 0 auto !important;
+            min-width: 326px !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        .tour-reel figcaption {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+            text-align: center;
+        }
     </style>
 <link rel="stylesheet" href="assets/site-sidebar.css?v=20261009c">
     <link rel="stylesheet" href="assets/page-scenes.css?v=20260923m">
@@ -426,6 +456,10 @@
           as of 2026-11-25 the Saaniya Software LLC channel
           (UCujh7xW9HhYi-tR_UlFYQNg) has no public playlist by that name.
           Add Admin Tour Part 3 to the academies row when it is published.
+          Instagram Row C: add the Kathak reel after it is published tonight
+          (2026-11-25 19:30 America/Chicago) and the Western reel after it is
+          published Friday 2026-11-27 19:30 America/Chicago. Do not add
+          placeholders beforehand.
         -->
         <section class="tour-videos" id="watch-the-tour" aria-labelledby="watch-the-tour-heading">
             <h2 id="watch-the-tour-heading">Watch the tour</h2>
@@ -480,7 +514,34 @@
                     </figure>
                 </div>
             </div>
+
+            <div class="tour-row" id="instagram-reels">
+                <h3>Instagram reels</h3>
+                <div class="tour-reels">
+                    <figure class="tour-reel">
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/Df7bT-mjPcp/"
+                            data-instgrm-version="14"
+                        >
+                            <a href="https://www.instagram.com/reel/Df7bT-mjPcp/">View the GuruVidyaZen reel on Instagram</a>
+                        </blockquote>
+                        <figcaption>GuruVidyaZen</figcaption>
+                    </figure>
+                    <figure class="tour-reel">
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/Df-eispArRe/"
+                            data-instgrm-version="14"
+                        >
+                            <a href="https://www.instagram.com/reel/Df-eispArRe/">View the Hindustani reel on Instagram</a>
+                        </blockquote>
+                        <figcaption>Hindustani</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
+        <script async src="https://www.instagram.com/embed.js"></script>
 
         <div class="success-message" id="successMessage">
             <strong>Thank you!</strong> Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration.
